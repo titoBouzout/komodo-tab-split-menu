@@ -1,0 +1,2 @@
+content tabsplitmenu chrome/content/
+overlay chrome://komodo/content/komodo.xul chrome://tabsplitmenu/content/tabsplitmenu.xul

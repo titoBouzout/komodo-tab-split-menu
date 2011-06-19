@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overlay  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ 
+	<script type="application/x-javascript">
+	  <![CDATA[
+		/*
+		  improvements more than welcome please submit these to github, regards
+		*/
+		var titoTabSplitMenu = {
+		  
+		  load:function()
+		  {
+			var menu = document.getElementById('tito-buffertab-context-split-move-menupopup');
+				menu.appendChild(document.getElementById('menu_splittab'));
+				menu.appendChild(document.getElementById('menu_movetab'));
+				menu.appendChild(document.createElement('menuseparator'));
+				menu.appendChild(document.getElementById('menu_openTabInNewWindow'));
+				menu.appendChild(document.getElementById('menu_moveTabToNewWindow'));
+
+		  }
+		}
+		addEventListener('load', titoTabSplitMenu.load, false);
+	  ]]>
+	</script>
+	
+  	<menupopup id="tabContextMenu">
+	  
+	  <menu label="Split/Move" id="tito-buffertab-context-split-move" insertafter="menu_movetab">
+		<menupopup id="tito-buffertab-context-split-move-menupopup">
+		</menupopup>
+	  </menu>
+	  <menuseparator id="tito-buffertab-context-split-move-menuseparator" insertafter="menu_movetab"/>
+
+	</menupopup>
+	
+</overlay>
